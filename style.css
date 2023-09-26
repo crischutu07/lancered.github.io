@@ -1,3 +1,25 @@
 body {
     background-color: black;
 }
+@font-face {
+    font-family: '8bitoperator JVE Regular';
+    src: url('./font.ttf');
+    src: url('./font.woff') format("woff"),
+    url("./font.woff2") format("woff2")
+  }
+#ip {
+    color: white;
+    font-family: '8bitoperator JVE Regular', sans-serif;
+    font-size: xx-large;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: center;
+    margin-top: 15%
+}
