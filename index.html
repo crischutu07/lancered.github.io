@@ -6,6 +6,19 @@
     <title>Lancer got ur ip address!!!</title>
     <link rel="stylesheet" href="style.css">
     <noscript>you don't need the ip man shut up</noscript>
+    <script>
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://ip-api.com/json");
+    xhr.send();
+    xhr.onload = () => {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        const contents = `* ${JSON.parse(xhr.response).query}`
+        ip.innerText = contents
+      } else {
+        alert(`[${xhr.status}] Oh no, you so good that even lancer can't get your ip addresses :(`);
+      }
+    };
+    </script>
 </head>
 <body>
     <img src="lancer.png" class="center"></img>
